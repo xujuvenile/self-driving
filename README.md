@@ -1,6 +1,35 @@
 # self-driving
 
+## TCP协议相关
 
+
+推荐这个老师讲的课，特别牛逼，尤其是滑动窗口和拥塞控制
+
+https://www.bilibili.com/video/BV1c4411d7jb?p=60
+
+
+文字版：
+- TCP协议那本书
+- 一些博客比如 https://tonydeng.github.io/sdn-handbook/basic/tcp.html
+
+
+#### 粘包问题
+
+- 发送方发送的若干包数据到接收方接收时粘成一包
+
+
+原因：
+
+- 发送方：nagle算法，多个小分组在一个确认到来时一起发送
+- 接送方：tcp接受包到缓存的速度》应用从缓存读取数据包的速度，多个包被缓存
+
+解决：
+
+边界边界边界
+
+- 定长包
+- 包尾 \r\n 标记
+- 包体长度
 
 ## java 相关
 
